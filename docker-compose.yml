@@ -42,7 +42,7 @@ services:
         container_name: mariadb-master
         image: mariadb:latest
         volumes:
-            - ./var/mariadb-master:/var/lib/mysql
+            - ./docker/var/mariadb-master:/var/lib/mysql
         environment:
             - MYSQL_ROOT_PASSWORD=secret
             - MYSQL_DATABASE=localstack
@@ -55,7 +55,7 @@ services:
         container_name: mariadb-slave
         image: mariadb:latest
         volumes:
-            - ./var/mariadb-slave:/var/lib/mysql
+            - ./docker/var/mariadb-slave:/var/lib/mysql
         environment:
             - MYSQL_ROOT_PASSWORD=secret
             - MYSQL_DATABASE=localstack
